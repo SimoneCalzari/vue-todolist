@@ -29,6 +29,7 @@ createApp({
         },
       ],
       textInput: '',
+      newDo: {},
     }
   },
   methods: {
@@ -50,13 +51,20 @@ createApp({
     },
     addDo(doToAdd) {
       if (doToAdd.trim().length > 0) {
-        const newDo = {
-          text: doToAdd,
-          done: false
-        };
-        this.listDos.push(newDo);
+        // CON VARIABILE LOCALE ANZICHE PROPRIETA DELL OGGETTO APP
+        // const newDo = {};
+        // newDo.text = doToAdd;
+        // newDo.done = false;
+        // listDos.push(newDo);
+        this.newDo.text = this.capitalizeDo(doToAdd);
+        this.newDo.done = false;
+        this.listDos.push(this.newDo);
       }
       this.textInput = '';
+      this.newDo = {};
+    },
+    capitalizeDo(string) {
+      return `${string.charAt(0).toUpperCase()}${string.slice(1, string.length - 1).toLowerCase()}`
     }
   }
 }).mount('#app');
