@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -16,13 +16,13 @@ h1 {
 }
 
 ul {
-  /* text-align: center; */
   font-size: 24px;
   list-style-type: none;
 }
 
 li {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .done {
@@ -54,9 +54,10 @@ li {
 }
 
 input {
-  height: 30px;
+  height: 35px;
   width: 250px;
   padding-left: 10px;
+  font-size: 20px;
 }
 
 button {

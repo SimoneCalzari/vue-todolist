@@ -41,6 +41,13 @@ createApp({
       }
       return '';
     },
+    changeDone(element) {
+      if (element.done === true) {
+        element.done = false;
+        return;
+      }
+      element.done = true;
+    },
     addDo(doToAdd) {
       if (doToAdd.trim().length > 0) {
         const newDo = {

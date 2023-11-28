@@ -25,13 +25,13 @@
         <div class="container">
           <!-- INPUT TEXT -->
           <div class="input-box">
-            <input type="text" v-model="textInput" @keyup.enter="addDo(textInput)">
+            <input type="text" v-model="textInput" @keyup.enter="addDo(textInput)" id="add-to-do" placeholder="Inserisci un nuovo task">
             <button @click="addDo(textInput)">Aggiungi</button>
           </div>
           <!-- INPUT TEXT -->
           <!-- LISTA TO DO -->
           <ul v-if="listDos.length > 0">
-            <li v-for="(doItem, index) in listDos" :class="isDone(doItem.done)">
+            <li v-for="(doItem, index) in listDos" :class="isDone(doItem.done)" @click="changeDone(doItem)">
               {{ index + 1}}  {{ doItem.text }}
               <i class="fa-solid fa-xmark" @click="removeDo(index)"></i>
             </li>
