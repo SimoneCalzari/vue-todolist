@@ -25,7 +25,7 @@
         <div class="container">
           <!-- INPUT TEXT -->
           <div class="input-box">
-            <input type="text" v-model="textInput">
+            <input type="text" v-model="textInput" @keyup.enter="addDo(textInput)">
             <button @click="addDo(textInput)">Aggiungi</button>
           </div>
           <!-- INPUT TEXT -->
