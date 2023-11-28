@@ -12,7 +12,7 @@
     <title>To do list</title>
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-cloak>
       <!-- HEADER -->
       <header>
         <div class="container">
@@ -23,13 +23,23 @@
       <!-- MAIN -->
       <main>
         <div class="container">
+          <!-- INPUT TEXT -->
+          <div class="input-box">
+            <input type="text" v-model="textInput">
+            <button @click="addDo(textInput)">Aggiungi</button>
+          </div>
+          <!-- INPUT TEXT -->
+          <!-- LISTA TO DO -->
           <ul v-if="listDos.length > 0">
             <li v-for="(doItem, index) in listDos" :class="isDone(doItem.done)">
               {{ index + 1}}  {{ doItem.text }}
               <i class="fa-solid fa-xmark" @click="removeDo(index)"></i>
             </li>
           </ul>
+          <!-- LISTA TO DO -->
+          <!-- MESSAGGIO LISTA VUOTA -->
           <div class="empty-list" v-else>La lista è al momento vuota</div>
+          <!-- MESSAGGIO LISTA VUOTA -->
         </div>
       </main>
       <!-- MAIN -->

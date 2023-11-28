@@ -10,7 +10,7 @@
 }
 
 h1 {
-  margin: 20px 0;
+  margin: 20px 0 10px;
   font-size: 3rem;
   text-transform: uppercase;
 }
@@ -44,4 +44,31 @@ li {
   display: inline-block;
   padding: 10px;
   border-radius: 10px;
+}
+
+.input-box {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 30px;
+  width: 250px;
+  padding-left: 10px;
+}
+
+button {
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+[v-cloak] {
+  display: none;
 }

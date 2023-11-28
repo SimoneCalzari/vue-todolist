@@ -27,7 +27,8 @@ createApp({
           text: 'Cambiare le lenzuola',
           done: true
         },
-      ]
+      ],
+      textInput: '',
     }
   },
   methods: {
@@ -39,6 +40,16 @@ createApp({
         return 'done';
       }
       return '';
+    },
+    addDo(doToAdd) {
+      if (doToAdd.trim().length > 0) {
+        const newDo = {
+          text: doToAdd,
+          done: false
+        };
+        this.listDos.push(newDo);
+      }
+      this.textInput = '';
     }
   }
 }).mount('#app');
