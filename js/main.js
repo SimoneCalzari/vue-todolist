@@ -23,10 +23,6 @@ createApp({
           text: 'Prendere il gelato',
           done: true
         },
-        {
-          text: 'Cambiare le lenzuola',
-          done: true
-        },
       ],
       textInput: '',
       newDo: {},

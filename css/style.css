@@ -4,13 +4,12 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
+#app {
+ padding: 30px;
 }
 
 h1 {
-  margin: 20px 0 10px;
+  margin: 10px 0 10px;
   font-size: 3rem;
   text-transform: uppercase;
 }
@@ -22,6 +21,11 @@ ul {
 
 li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.li-text {
   cursor: pointer;
 }
 
@@ -31,19 +35,13 @@ li {
 
 .fa-xmark {
   vertical-align: middle;
-  margin-left: 20px;
-}
-
-.fa-xmark:hover {
+  margin-left: 15px;
   cursor: pointer;
 }
 
+
 .empty-list {
   font-size: 26px;
-  background-color: yellow;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 10px;
 }
 
 .input-box {
@@ -53,7 +51,7 @@ li {
   margin-bottom: 10px;
 }
 
-input {
+#add-to-do {
   height: 35px;
   width: 250px;
   padding-left: 10px;
@@ -64,9 +62,7 @@ button {
   margin-left: 20px;
   padding: 5px;
   border-radius: 5px;
-}
-
-button:hover {
+  font-size: 18px;
   cursor: pointer;
 }
 
