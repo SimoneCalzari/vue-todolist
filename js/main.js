@@ -23,10 +23,22 @@ createApp({
           text: 'Prendere il gelato',
           done: true
         },
+        {
+          text: 'Cambiare le lenzuola',
+          done: true
+        },
       ]
     }
   },
   methods: {
-
+    removeDo(index) {
+      this.listDos.splice(index, 1);
+    },
+    isDone(stateTask) {
+      if (stateTask === true) {
+        return 'done';
+      }
+      return '';
+    }
   }
 }).mount('#app');

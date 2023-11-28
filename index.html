@@ -23,11 +23,13 @@
       <!-- MAIN -->
       <main>
         <div class="container">
-          <ul>
-            <li v-for="(doItem, index) in listDos" :class="(doItem.done) ? 'done' : ''">
+          <ul v-if="listDos.length > 0">
+            <li v-for="(doItem, index) in listDos" :class="isDone(doItem.done)">
               {{ index + 1}}  {{ doItem.text }}
+              <i class="fa-solid fa-xmark" @click="removeDo(index)"></i>
             </li>
           </ul>
+          <div class="empty-list" v-else>La lista è al momento vuota</div>
         </div>
       </main>
       <!-- MAIN -->

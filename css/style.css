@@ -28,3 +28,20 @@ li {
 .done {
   text-decoration: line-through;
 }
+
+.fa-xmark {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.fa-xmark:hover {
+  cursor: pointer;
+}
+
+.empty-list {
+  font-size: 26px;
+  background-color: yellow;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+}
