@@ -3,3 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+ul {
+  /* text-align: center; */
+  font-size: 24px;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+}

@@ -12,6 +12,26 @@
     <title>To do list</title>
   </head>
   <body>
+    <div id="app">
+      <!-- HEADER -->
+      <header>
+        <div class="container">
+          <h1>To do list</h1>
+        </div>
+      </header>
+      <!-- HEADER -->
+      <!-- MAIN -->
+      <main>
+        <div class="container">
+          <ul>
+            <li v-for="(doItem, index) in listDos" :class="(doItem.done) ? 'done' : ''">
+              {{ index + 1}}  {{ doItem.text }}
+            </li>
+          </ul>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </div>
     <!-- VUE JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- VUE JS -->
